@@ -3,7 +3,7 @@ import joblib
 import pandas as pd
 
 from flask_cors import CORS
-from utils import select_features_column
+# from utils import select_features_column
 
 app = Flask(__name__)
 CORS(app)  # Allow all origins — or use CORS(app, origins=["https://your-frontend.com"])
