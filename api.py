@@ -3,13 +3,14 @@ import joblib
 import pandas as pd
 
 from flask_cors import CORS
+from utils import select_features_column
 
 app = Flask(__name__)
 CORS(app)  # Allow all origins — or use CORS(app, origins=["https://your-frontend.com"])
 
 # Load model and preprocessors once
-def select_features_column(X):
-    return X['features']
+# def select_features_column(X):
+#     return X['features']
 
 model = joblib.load("model.pkl")
 preprocessor = joblib.load("preprocessor.pkl")
