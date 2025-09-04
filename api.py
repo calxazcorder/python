@@ -2,7 +2,10 @@ from flask import Flask, request, jsonify
 import joblib
 import pandas as pd
 
+from flask_cors import CORS
+
 app = Flask(__name__)
+CORS(app)  # Allow all origins — or use CORS(app, origins=["https://your-frontend.com"])
 
 # Load model and preprocessors once
 def select_features_column(X):
